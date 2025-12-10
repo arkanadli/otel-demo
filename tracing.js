@@ -13,9 +13,9 @@ const traceExporter = new OTLPTraceExporter({
     // url: 'https://20.255.49.241:4317',
 
     // Tambahkan ini untuk HTTPS + custom CA
-    httpsAgentOptions: {
+    httpAgentOptions: {
         ca: fs.readFileSync(caCertPath),
-        rejectUnauthorized: true, // wajib true kalau certificate valid
+        rejectUnauthorized: true,
     }
 });
 
