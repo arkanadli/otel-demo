@@ -8,8 +8,8 @@ const caCertPath = '/opt/otel-collector/ca.crt';
 
 
 const traceExporter = new OTLPTraceExporter({
-    // url: 'https://10.17.17.42:4318/v1/traces',
-    url: 'https://10.17.17.42:4318',
+    url: 'https://10.17.17.42:4318/v1/traces',
+    // url: 'https://10.17.17.42:4318',
     // url: 'http://20.255.49.241:4317',
 
     // Tambahkan ini untuk HTTPS + custom CA
