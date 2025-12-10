@@ -4,7 +4,7 @@ const { getNodeAutoInstrumentations } = require('@opentelemetry/auto-instrumenta
 const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-http');
 // const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-grpc');
 const { BatchSpanProcessor } = require('@opentelemetry/sdk-trace-base');
-const caCertPath = '/opt/otel-collector/collector.crt';
+const caCertPath = '/opt/otel-collector/ca.crt';
 
 
 const traceExporter = new OTLPTraceExporter({
