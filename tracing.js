@@ -5,7 +5,7 @@ const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-http')
 const { BatchSpanProcessor } = require('@opentelemetry/sdk-trace-base');
 
 const traceExporter = new OTLPTraceExporter({
-    url: 'https://10.54.59.51:4318/v1/traces',
+    url: 'https://10.17.17.42:4318/v1/traces',
     // url: 'http://20.255.49.241:4317',
 });
 
