@@ -41,12 +41,18 @@ const logExporter = new OTLPLogExporter({
 const sdk = new NodeSDK({
     serviceName: "SIGNOZ-NODEJS-DEV",
         // ── Resource attributes ──────────────────────────────────────────────
-    resource: new Resource({
-        "service.name":    "SIGNOZ-NODEJS-DEV",
+    // resource: new Resource({
+    //     "service.name":    "SIGNOZ-NODEJS-DEV",
+    //     "host.name":       "tsel-poc-target",
+    //     "management.zone": "SIGNOZ",
+    //     "deployment.environtment": "DEV",
+    // }),
+
+    resourceAttributes: {
         "host.name":       "tsel-poc-target",
         "management.zone": "SIGNOZ",
         "deployment.environtment": "DEV",
-    }),
+    },
     // ────────────────────────────────────────────────────────────────────
 
 
