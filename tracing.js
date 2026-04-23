@@ -1,6 +1,8 @@
 const fs = require("fs");
 const { NodeSDK } = require("@opentelemetry/sdk-node");
 const { getNodeAutoInstrumentations } = require("@opentelemetry/auto-instrumentations-node");
+const { Resource } = require("@opentelemetry/resources");
+const { SEMRESATTRS_SERVICE_NAME, SEMRESATTRS_HOST_NAME } = require("@opentelemetry/semantic-conventions");
 
 const { BatchSpanProcessor } = require("@opentelemetry/sdk-trace-base");
 const { OTLPTraceExporter } = require("@opentelemetry/exporter-trace-otlp-http");
