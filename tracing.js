@@ -37,7 +37,14 @@ const logExporter = new OTLPLogExporter({
 });
 
 const sdk = new NodeSDK({
-    serviceName: "test-dummy",
+    serviceName: "SIGNOZ-NODEJS-DEV",
+        // ── Resource attributes ──────────────────────────────────────────────
+    resourceAttributes: {
+        "management.zone": "SIGNOZ",
+        "host.name": "tsel-poc-target",
+    },
+    // ────────────────────────────────────────────────────────────────────
+
 
     // traces
     spanProcessor: new BatchSpanProcessor(traceExporter),
