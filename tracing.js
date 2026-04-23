@@ -42,9 +42,9 @@ const sdk = new NodeSDK({
     serviceName: "SIGNOZ-NODEJS-DEV",
         // ── Resource attributes ──────────────────────────────────────────────
     resource: new Resource({
-        [SEMRESATTRS_SERVICE_NAME]: "SIGNOZ-NODEJS-DEV",
-        [SEMRESATTRS_HOST_NAME]:    "tsel-poc-target",
-        "management.zone":          "SIGNOZ",
+        "service.name":    "SIGNOZ-NODEJS-DEV",
+        "host.name":       "tsel-poc-target",
+        "management.zone": "SIGNOZ",
         "deployment.environtment": "DEV",
     }),
     // ────────────────────────────────────────────────────────────────────
