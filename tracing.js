@@ -1,7 +1,6 @@
 const fs = require("fs");
 const { NodeSDK } = require("@opentelemetry/sdk-node");
 const { getNodeAutoInstrumentations } = require("@opentelemetry/auto-instrumentations-node");
-const { Resource } = require("@opentelemetry/resources");
 const { SEMRESATTRS_SERVICE_NAME, SEMRESATTRS_HOST_NAME } = require("@opentelemetry/semantic-conventions");
 
 const { BatchSpanProcessor } = require("@opentelemetry/sdk-trace-base");
@@ -40,7 +39,7 @@ const logExporter = new OTLPLogExporter({
 
 const sdk = new NodeSDK({
     serviceName: "SIGNOZ-NODEJS-DEV",
-        // ── Resource attributes ──────────────────────────────────────────────
+    // ── Resource attributes ──────────────────────────────────────────────
     // resource: new Resource({
     //     "service.name":    "SIGNOZ-NODEJS-DEV",
     //     "host.name":       "tsel-poc-target",
